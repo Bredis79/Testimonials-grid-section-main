@@ -1,0 +1,199 @@
+:root {
+    --Moderate_violet: hsl(263, 55%, 52%);
+    --Very_dark_grayish_blue: hsl(217, 19%, 35%);
+    --Very_dark_blackish_blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%); 
+    --Light_gray: hsl(0, 0%, 81%);
+    --Light_grayish_blue: hsl(210, 46%, 95%);
+}
+
+html {
+    height: 100vh;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light_grayish_blue);
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1.5rem;
+        
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.container {
+    margin: 0 auto;
+    min-height: 43.846rem;
+    max-width: 90.769rem;
+	display: grid;
+	gap: 2rem 2rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.container > * {
+    padding: 1.846rem 2.692rem 0rem 2.307rem;
+    /* padding: 0rem 2.692rem 0rem 2.307rem; */
+
+}
+
+.daniel {
+	grid-area: 1 / 1 / 2 / 3;
+    max-width: 41.538rem;
+    min-height: 21.769rem;
+    background-color: var(--Moderate_violet);
+    border-radius: .6rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.jonathan {
+	grid-area: 1 / 3 / 2 / 4;
+    max-width: 19.615rem;
+    min-height: 21.769rem;
+    background-color: var(--Very_dark_grayish_blue);
+    border-radius: .6rem;
+}
+
+.kira {
+	grid-area: 1 / 4 / 3 / 5;
+    max-width: 19.615rem;
+    min-height: 44.153rem;
+    background-color: var(--White);
+    border-radius: .6rem;
+}
+
+.patrick {
+	grid-area: 2 / 2 / 3 / 4;
+    max-width: 41.538rem;
+    min-height: 20.461rem;
+    background-color: var(--Very_dark_blackish_blue);
+    border-radius: .6rem;
+}
+
+.jeanette {
+	grid-area: 2 / 1 / 3 / 2;
+    max-width: 19.615rem;
+    min-height: 20.538rem;
+    background-color: var(--White);
+    border-radius: .6rem;
+}
+
+header {
+    margin-top: .13rem;
+}
+/*** Photos ***/
+.daniel header img,
+.patrick header img {
+    width: 2.45rem;
+
+    border-radius: 50%;
+    border: 2px solid hsl(263, 74%, 70%);
+    
+   
+    position: relative;
+    float: left;
+}
+
+.quotes {
+    width: 8rem;
+    border-radius: 0;
+    float: right;
+    top:0;
+    right: 7rem;
+    position: absolute;
+}
+
+header img {
+    width: 2.3rem;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    margin-right: 1.230rem;
+}
+
+article h2 {
+    font-size: 1.5rem;
+    line-height: 1.84rem;
+    color: var(--Light_gray);
+    margin: 1.1rem 0 1.15rem 0;
+    font-weight: 600;
+    position: relative;
+}
+
+.kira article h2,
+.jeanette article h2 {
+    font-size: 1.5rem;
+    line-height: 1.84rem;
+    color: var(--Very_dark_grayish_blue);
+    margin: 1.35rem 0;
+    font-weight: 600;
+}
+
+.verified {
+    font-size: 0.8rem;
+}
+
+article p {
+    line-height: 1.4rem;
+    color: var(--Light_gray);
+    opacity: 70%;
+}
+
+.kira article p,
+.jeanette article p {
+    color: var(--Very_dark_grayish_blue);
+    opacity: 70%;
+}
+
+header h2 {
+    color: var(--Light_gray);
+}
+header h2.verified {
+    opacity: 50%;
+}
+
+.kira header h2,
+.jeanette header h2 {
+    color: var(--Very_dark_blackish_blue);
+}
+
+/*** Media queries ***/
+
+@media (max-width: 68.461rem) {
+    body{
+        height: fit-content;
+    }
+    .container {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 151.230rem;
+    }
+    .daniel, .jeanette, .jonathan,
+    .kira, .patrick{
+        max-width: 100vw;
+        min-height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .quotes {
+        right: 1.7rem;
+    }
+}
+@media (min-width:27.692rem){
+    .container {min-width:365px;}
+}
+
+footer {
+    margin-top: 1rem;
+}
